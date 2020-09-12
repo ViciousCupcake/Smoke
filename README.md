@@ -1,6 +1,5 @@
 # Smoke
-A website made to promote environmental health and give a more personal feeling of the environment's health today.
-
+A website designed to promote healthy living and provide a more relatable indicator of the current air quality.
 Visit me at [cigarette.cf](https://cigarette.cf/)
 
 ## Screenshots
