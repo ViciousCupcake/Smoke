@@ -94,8 +94,20 @@ async function appendData(data) {
         document.getElementById("home").style.backgroundColor = "#655010";
         document.getElementById("home").style.backgroundImage = 'url("images/clean-scenary.jpg")';
     }
+    var city = data.data.city;
 
-    document.getElementById("result-title").innerHTML = "<b>In " + data.data.city + ", You Involuntarily Smoke</b>";
+    await fetch('http://ip-api.com/json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            city = data.city;
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+
+    document.getElementById("result-title").innerHTML = "<b>In " + city + ", You Involuntarily Smoke</b>";
 
     document.getElementById("results").style.opacity = 1;
     document.getElementById("initial").style.display = "none";
