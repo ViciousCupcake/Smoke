@@ -101,7 +101,7 @@ async function appendData(data) {
             return response.json();
         })
         .then(function (data) {
-            if (city != null) {
+            if ((!city === null)) {
                 city = data.city;
             }
         })
