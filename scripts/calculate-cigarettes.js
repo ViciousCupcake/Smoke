@@ -103,7 +103,6 @@ async function appendData(data) {
         .then(function (data) {
             if (!(city === null)) {
                 city = data.city;
-                alert(city);
             }
         })
         .catch(function (err) {
