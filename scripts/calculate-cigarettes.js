@@ -96,12 +96,14 @@ async function appendData(data) {
     }
     var city = data.data.city;
 
-    await fetch('http://ip-api.com/json')
+    await fetch('https://geolocation-db.com/json/')
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            city = data.city;
+            if (city != null) {
+                city = data.city;
+            }
         })
         .catch(function (err) {
             console.log('error: ' + err);
