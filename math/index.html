@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" href="../images/favicon.png" sizes="32x32" type="image/png">
+    <title>The Mathematics Behind</title>
+</head>
+<style>
+    .bg {
+        background-color: #7c5f9d;
+
+        background-image: url('../images/home-screen.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .background-tint {
+        background-color: rgba(0, 0, 0, .7);
+        background-blend-mode: multiply;
+    }
+
+    .background-tint-white {
+        background-color: rgba(255, 255, 255, .80);
+        background-blend-mode: multiply;
+    }
+
+    body,
+    html {
+        height: 100%;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .title {
+            font-size: 28px;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .title {
+            font-size: 18px;
+        }
+    }
+</style>
+
+<body>
+    <div class="bg" id="home">
+        <div class="w3-padding-large w3-display-middle">
+            <header class="w3-container w3-padding-32 background-tint" style="min-width: 80vw;">
+                <h1 class="w3-text-light-grey w3-center"><b>The Math Behind This</b></h1>
+                <div class="w3-padding-large w3-text-light-grey">
+                    <img src="../images/formula.gif" style="float: left;"
+                        class="background-tint-white w3-padding-large">
+                    <p> This equation represents the concentration of PM<sub>2.5</sub> particles (&#181;g/m<sup>3</sup>)
+                        <i>C</i> given an AQI <i>I</i>. Where C<sub>h</sub> is the concentration of PM<sub>2.5</sub>
+                        particles in the upper limit of the current tier and C<sub>l</sub> is the concentration of
+                        PM<sub>2.5</sub> particles in the lower limit of the current tier. Likewise, I<sub>h</sub> is
+                        the maximum AQI for the current tier and I<sub>l</sub> is the mininum AQI for the current tier.
+                        <br> These tiers can be found at <a
+                            href="https://aqs.epa.gov/aqsweb/documents/codetables/aqi_breakpoints.html">https://aqs.epa.gov/aqsweb/documents/codetables/aqi_breakpoints.html</a>
+
+                        <br>e.g. if your AQI is 115, I<sub>l</sub> is 101 and I<sub>h</sub> is 150. Furthermore,
+                        C<sub>l</sub> is 35.5 and C<sub>h</sub> is 55.4. Therefore, your concentration is 41.1
+                        &#181;g/m<sup>3</sup>.
+                        According to <a
+                            href="http://berkeleyearth.org/archive/air-pollution-and-cigarette-equivalence/#:~:text=Here%20is%20the%20rule%20of%20thumb%3A%20one%20cigarette,United%20States%20in%202013%20was%209.0%20%CE%BCg%2Fm%203.">Berkeley
+                            Earth</a>, a cigarette is equivalent to 22 &#181;g/m<sup>3</sup> of pollution. Therefore,
+                        41.1 &#181;g/m<sup>3</sup> is equal to about 1.87 cigarettes. (41.1&#181;g/m<sup>3</sup> / 22 =
+                        1.87).
+
+                    </p>
+                </div>
+            </header>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $(".latex").latex();
+        });
+    </script>
+</body>
+
+</html>

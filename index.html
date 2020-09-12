@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="css/animated-progress-bar.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <script src="scripts/calculate-cigarettes.js"></script>
+    <!--<link rel="stylesheet" href="css/hover-button.css">-->
+    <title>Smoke</title>
+</head>
+
+<style>
+    .bg {
+        background-color: #7c5f9d;
+        background-image: url('images/home-screen.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    body,
+    html {
+        height: 100%;
+    }
+
+    .background-tint {
+        background-color: rgba(0, 0, 0, .7);
+        background-blend-mode: multiply;
+    }
+
+    .cig-gradient {
+        background: rgb(227, 172, 99);
+        background: linear-gradient(90deg, rgba(227, 172, 99, 1) 0%, rgba(227, 172, 99, 1) 25%, rgba(206, 172, 35, 1) 25%, rgba(206, 172, 35, 1) 31%, rgba(254, 254, 254, 1) 31%, rgba(254, 254, 254, 1) 85%, rgba(206, 206, 206, 1) 96%, rgba(212, 128, 71, 1) 99%);
+    }
+
+    .hidden-container {
+        opacity: 0;
+        display: none;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .title {
+            font-size: 28px;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .title {
+            font-size: 18px;
+        }
+    }
+</style>
+
+<body id="body">
+    <noscript><h1>Your browser does not support JavaScript! JavaScript is required for this to work properly.</h1></noscript>
+
+    <div class="bg" id="home">
+        <div class="w3-padding-large w3-display-middle">
+            <!-- Header/Home -->
+            <header class="w3-container  w3-center" id="main">
+                <div id="initial" style="display: initial;">
+                    <button class="button" style="z-index: 100;" onclick="callAPI()">
+                        <div class="w3-padding-large">How much do I involuntarily smoke?</div>
+                    </button>
+                </div>
+            </header>
+            <header class="w3-container w3-padding-32 w3-center background-tint" style="display: none; min-width: 80vw;"
+                id="result-header">
+                <div id="results" class="hidden-container">
+                    <h1 class="title w3-text-light-grey" style="padding-bottom: 2vh;" id="result-title"></h1>
+                    <div id="cigarette-container"> </div>
+                    <h1 class="title w3-text-light-grey"><b>cigarettes a day.</b></h1>
+                    <div class="w3-row w3-medium w3-text-light-grey">
+                        <div class="w3-third" id="first-third"></div>
+                        <div class="w3-third" id="second-third"></div>
+                        <div class="w3-third" id="third-third"></div>
+                    </div>
+                    <div class="w3-row w3-medium w3-text-light-grey">
+                        <div class="w3-third"><a href="math/index.html" target="_blank">The Math Behind This</a></div>
+                        <div class="w3-third"><a href="attributions/index.html" target="_blank">Attributions</a></div>
+                        <div class="w3-third"><a href="legal/index.html" target="_blank">Legal</a></div>
+                    </div>
+                    <h6 class="w3-medium w3-text-light-grey" style="column-count: 3;" id="result-footer"></h6>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div id="myData"></div>
+</body>
+
+</html>

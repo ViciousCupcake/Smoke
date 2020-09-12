@@ -1,0 +1,36 @@
+.meter {
+    position: relative;
+    overflow: hidden;
+}
+
+.meter span {
+    display: block;
+    height: 100%;
+}
+
+.progress {
+    animation: progressBar 1s ease-in-out;
+    animation-fill-mode: both;
+    /*-moz-animation: progressBar 1s ease-in-out;
+    -moz-animation-fill-mode: both;*/
+}
+
+@keyframes progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/*@-moz-keyframes progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}*/
