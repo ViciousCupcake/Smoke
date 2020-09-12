@@ -103,7 +103,7 @@ async function appendData(data) {
         .then(function (data) {
             if (!!data.city) {
                 city = data.city;
-    m        }
+            }
         })
         .catch(function (err) {
             console.log('error: ' + err);
