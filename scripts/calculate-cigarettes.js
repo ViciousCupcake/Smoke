@@ -101,9 +101,9 @@ async function appendData(data) {
             return response.json();
         })
         .then(function (data) {
-            if (!(city === null)) {
+            if (!!data.city) {
                 city = data.city;
-            }
+    m        }
         })
         .catch(function (err) {
             console.log('error: ' + err);
