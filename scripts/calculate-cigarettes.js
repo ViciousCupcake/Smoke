@@ -96,7 +96,7 @@ async function appendData(data) {
     }
     var city = data.data.city;
 
-    await fetch('https://geolocation-db.com/json/')
+    await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=28a6dcb2eaa54055bb44be0bb3b91110')
         .then(function (response) {
             return response.json();
         })
