@@ -124,5 +124,5 @@ async function appendData(data) {
 
     document.getElementById("first-third").innerHTML = "AQI: " + I + "\u2014" + msg;
     document.getElementById("second-third").innerHTML = "PM<sub>2.5</sub> conc.: " + C.toFixed(2) + " \u00B5g/m<sup>3</sup>";
-    document.getElementById("third-third").innerHTML = "Cigarettes equivalency: " + cigarettes.toFixed(2) + " cigarettes/day";
+    document.getElementById("third-third").innerHTML = "Cigarette equivalency: " + cigarettes.toFixed(2) + " cigarettes/day";
 }
